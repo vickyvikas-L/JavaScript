@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click Me</button>
+</body>
+</html>
+
+<script>
+    // const btn = document.getElementById("btn");
+    // let color =true 
+    // btn.addEventListener("click",()=>{
+    //     if(color === true){
+    //     document.body.style.backgroundColor = "orange"
+    //     btn.innerText = "change to green"
+    //     btn.style.height="40px"
+    //     color = false
+    // }else{  
+    //     document.body.style.backgroundColor ="green"
+    //     btn.innerText = 'change to orange'
+    //     btn.style.height ="40px"
+
+    //     color =true
+    // }
+    // })
+
+
+
+    const btn = document.getElementById("btn");
+
+let colors = ["orange", "green", "blue", "red", "purple"];
+let index = 0;
+
+btn.addEventListener("click", () => {
+    document.body.style.backgroundColor = colors[index];
+
+    index++;
+
+    if (index === colors.length) {
+        index = 0;
+    }
+
+    btn.innerText = "Change Color";
+    btn.style.height = "40px";
+});
+
+</script>
