@@ -1,0 +1,97 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="console.log(`Quantity ${Quantity}`);">show Quantity</button>
+     
+    <button onclick="Quantity=Quantity+1 
+    console.log(`Quantity ${Quantity}`);">Add to cart</button>
+
+     <button onclick="Quantity=Quantity+2
+    console.log(`Quantity ${Quantity}`);">+2</button>
+    
+     <button onclick="Quantity=0
+    console.log(`Quantity ${Quantity}`);">Reset</button>
+</body>
+</html>
+
+<script>
+    let Quantity=0;
+</script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantity Counter</title>
+</head>
+
+<body>
+
+    <h2 id="quantityText">Quantity: 0</h2>
+
+    <button id="showQuantity">Show Quantity</button>
+
+    <button id="addCart">Add to Cart</button>
+
+    <button id="addTwo">+2</button>
+
+    <button id="reset">Reset</button>
+
+
+    <script>
+
+        // Variable
+        let quantity = 0;
+
+        // DOM elements
+        let quantityText = document.getElementById("quantityText");
+        let showQuantity = document.getElementById("showQuantity");
+        let addCart = document.getElementById("addCart");
+        let addTwo = document.getElementById("addTwo");
+        let reset = document.getElementById("reset");
+
+
+        // Show Quantity
+        showQuantity.addEventListener("click", function () {
+            console.log(`Quantity ${quantity}`);
+            quantityText.innerText = `Quantity: ${quantity}`;
+        });
+
+
+        // Add to Cart
+        addCart.addEventListener("click", function () {
+            quantity = quantity + 1;
+
+            console.log(`Quantity ${quantity}`);
+            quantityText.innerText = `Quantity: ${quantity}`;
+        });
+
+
+        // Add 2
+        addTwo.addEventListener("click", function () {
+            quantity = quantity + 2;
+
+            console.log(`Quantity ${quantity}`);
+            quantityText.innerText = `Quantity: ${quantity}`;
+        });
+
+
+        // Reset
+        reset.addEventListener("click", function () {
+            quantity = 0;
+
+            console.log(`Quantity ${quantity}`);
+            quantityText.innerText = `Quantity: ${quantity}`;
+        });
+
+    </script>
+
+</body>
+</html>
+
